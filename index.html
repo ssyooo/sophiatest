@@ -53,6 +53,57 @@
             window.location.href = "";
         });
           
+        analytics.track('Order Completed', {
+            eventCategory: 'Link',
+            eventAction: 'Click',
+            eventLabel: 'Purchase',
+            order_id: orderId,
+            total: subtotal,
+            Revenue: subtotal,
+            shipping: shipping_amount,
+            tax,
+            discount: discount_amount,
+            coupon: promocode,
+            PromoCode: promocode,
+            currency,
+            transactionCurrency: currency,
+            value: subtotal.toFixed(2),
+            skus,
+            ProductSkus: skus,
+            cart_id: cartId,
+            products: cartStore.cartItems,
+            items: cartStore.cartItems,
+            transactionProductQty: quantitySum,
+            qty: quantitySum,
+            transactionProducts: cartStore.cartItems,
+            transactionTotal: grandtotal,
+            consultant,
+            transactionConsultantID: consultant ? consultant.id : 1,
+            consultant_id: consultant ? consultant.id : 1,
+            tethered: consultant ? consultant.id : 1,
+            social_id: consultant ? consultant.socialId : 0,
+            time: Date.now(),
+            chnl: 'online'
+        });
+
+        segment[product.id] = {
+            product_id: product.sku,
+            magentoId: product.id,
+            ItemID: product.sku,
+            sku: product.sku,
+            transactionProductSku: product.sku,
+            transactionProductName: product.title,
+            name: product.title,
+            price: product.price,
+            value: product.price.toFixed(2), 
+            url: product.handle,
+            tags: product.tags,
+            variant: null,
+            image_url: product.image && product.image.imageUrl ? product.image.imageUrl : null,
+            id: product.sku,
+            title: product.title
+        };
+          
         analytics.identify(12345, {
             email: email, 
             name: fullname
