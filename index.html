@@ -1,116 +1,52 @@
 <!DOCTYPE html> 
 <html> 
 <head> 
-    <title>Home Questionnaire<span id="selection-marker-1" class="redactor-selection-marker"></span></title> 
+    <title>Shop Gurdas</title> 
 
-    <!--Placeholder for Segment Snippet --> 
-    <script>
-    !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="4.0.0";
-    analytics.load("LTHsDDN4Ow9zlUIFET7P28wY9EcRNLlU");
-    analytics.page();
-    }}();
-    </script>
 
 </head> 
 <body> 
-<h1>What is your favorite place to travel?</h1> 
-<p>I am building a directory of the sweetest travel destinations.</p>  
-<form name="travel" onsubmit="identify(event)">
-     What is your favorite travel destination?
-    <input name="destination" required="" size="81" type="text"/> 
-    <br><br><br> 
-    Any recommendations (cool things to do, places to visit or restaurants to eat)? 
+<h1>Do you even Gurdas?</h1> 
+<p>I am running a survey to determine what Gurdas merchandise we should make next.</p>  
+<form name="gurdas-types">
+<form action="https://i.ibb.co/hK96JgC/IMG-6036.jpg">
+    
+<p>Check all of the Gurdas merchandise that you would want.</p>
+  <input type="checkbox" name="merch1" value="T-Shirt"> T-Shirt<br>
+  <input type="checkbox" name="merch2" value="Hat"> Baseball hat<br>
+  <input type="checkbox" name="merch3" value="Stickers" checked> Moar stickers<br>
+  <input type="checkbox" name="merch3" value="Water Bottle" checked> Water bottle with Gurdas printed on it<br>
+  <input type="checkbox" name="merch3" value="Socks" checked> Socks with small Gurdas print all over them<br>
+  <input type="checkbox" name="merch3" value="Phone Case" checked> iPhone case<br>
+  <input type="checkbox" name="merch3" value="Other" checked> Other<br><br>
+ 
+ <p>Which one is your favorite Gurdas?</p>
+  <input type="radio" name="gurdas" value="work"> Work<br>
+  <input type="radio" name="gurdas" value="party"> Party<br>
+  <input type="radio" name="gurdas" value="rave"> Rave<br>
+  <input type="radio" name="gurdas" value="other"> Other<br><br>
+    
+    
+<p>Why do you want more Gurdas merchandise?</p>
+    <input name="gurdas-why" required="" size="81" type="text"/> 
+    <br><br>
+    
+    <p>Any other comments? </p>
     <br><br> 
     <textarea cols="81" name="details" required="" rows="10">
     </textarea> 
     <br><br> 
+    
     Name: <input name="fullname" required="" size="75" type="text"/> 
     <br><br> 
     Email: <input name="email" required="" size="75" type="email"/> 
-    <br><br>
-    <input name="submit" type="submit" value="submit"/>
-</form> 
-    <!--Placeholder for identify and track script -->
-      <script type="text/javascript">
-      function identify(e){
-        e.preventDefault();
-        var form = e.target;
-        var email = form["email"].value;
-        var fullname = form["fullname"].value;
-        var destination = form["destination"].value;
-        var details = form["details"].value;
-        var user = {
-            email: email, 
-            name: fullname, 
-            destination: destination, 
-            details: details
-        };
-        analytics.identify(1435345435, {
-            email: email, 
-            name: fullname
-        });
-        analytics.track('destination submitted', user, function() {
-            window.location.href = "";
-        });
-          
-        analytics.track('Order Completed', {
-            eventCategory: 'Link',
-            eventAction: 'Click',
-            eventLabel: 'Purchase',
-            order_id: orderId,
-            total: subtotal,
-            Revenue: subtotal,
-            shipping: shipping_amount,
-            tax,
-            discount: discount_amount,
-            coupon: promocode,
-            PromoCode: promocode,
-            currency,
-            transactionCurrency: currency,
-            value: subtotal.toFixed(2),
-            skus,
-            ProductSkus: skus,
-            cart_id: cartId,
-            products: cartStore.cartItems,
-            items: cartStore.cartItems,
-            transactionProductQty: quantitySum,
-            qty: quantitySum,
-            transactionProducts: cartStore.cartItems,
-            transactionTotal: grandtotal,
-            consultant,
-            transactionConsultantID: consultant ? consultant.id : 1,
-            consultant_id: consultant ? consultant.id : 1,
-            tethered: consultant ? consultant.id : 1,
-            social_id: consultant ? consultant.socialId : 0,
-            time: Date.now(),
-            chnl: 'online'
-        });
+    <br><br>  
+    
+<input name="submit" type="submit" value="submit"/>
+    
+    
+</form>
 
-        segment[product.id] = {
-            product_id: product.sku,
-            magentoId: product.id,
-            ItemID: product.sku,
-            sku: product.sku,
-            transactionProductSku: product.sku,
-            transactionProductName: product.title,
-            name: product.title,
-            price: product.price,
-            value: product.price.toFixed(2), 
-            url: product.handle,
-            tags: product.tags,
-            variant: null,
-            image_url: product.image && product.image.imageUrl ? product.image.imageUrl : null,
-            id: product.sku,
-            title: product.title
-        };
-          
-        analytics.identify(12345, {
-            email: email, 
-            name: fullname
-        });
-     
-      }
-</script>
     
 </body> 
 </html>
