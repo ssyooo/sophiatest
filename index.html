@@ -8,14 +8,24 @@
   }}();
 </script>
     <title>Shop Gurdas</title> 
-
+ <script>
+     
+  document.addEventListener("DOMContentLoaded", function(event) {
+      document.getElementById('twitter-link').addEventListener('click', e => {
+          analytics.track('Twitter Link Clicked')
+      })
+  });
+     
+     
+ </script>
 
 </head> 
 <body> 
 <h1>Do you even Gurdas?</h1> 
 <h2>I am running a survey to determine what Gurdas merchandise we should make next.</h2>  
 
-<p><a href="https://twitter.com/gnijor?lang=en">Gurdas on Twitter</a> <br>
+<p><a id="twitter-link" href="https://twitter.com/gnijor?lang=en">Gurdas on Twitter</a> <br>
+    
 <p> <a href="https://awesomereact.com/videos/OZGgVxFxSIs">Gurdas speaks at React.js Conf 2015</a> <br><br>
 <form name="gurdas-types" action="https://i.ibb.co/hK96JgC/IMG-6036.jpg" method="POST">
     
