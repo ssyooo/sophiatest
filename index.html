@@ -14,7 +14,26 @@
       document.getElementById('twitter-link').addEventListener('click', e => {
           analytics.track('Twitter Link Clicked')
       })
+     
+      document.getElementById('the-form').addEventListener('submit', e => {
+          
+          const name = document.getElementById('name').value
+          const email = document.getElementById('email').value
+          
+          analytics.track('Form Submitted', {
+              name,
+              email
+          })
+      })
   });
+     
+  
+//   document.addEventListener("DOMContentLoaded", function(event) {
+//   analytics.track(userId, 'Lead Captured', {
+//   email: 'email',
+//   location: 'header navbar'
+//   url: 'https://segment.com/'
+// }});
      
      
  </script>
@@ -27,7 +46,7 @@
 <p><a id="twitter-link" href="https://twitter.com/gnijor?lang=en">Gurdas on Twitter</a> <br>
     
 <p> <a href="https://awesomereact.com/videos/OZGgVxFxSIs">Gurdas speaks at React.js Conf 2015</a> <br><br>
-<form name="gurdas-types" action="https://i.ibb.co/hK96JgC/IMG-6036.jpg" method="POST">
+<form id="the-form" name="gurdas-types" action="https://i.ibb.co/hK96JgC/IMG-6036.jpg" method="POST">
     
 <p>Which Gurdas merchandise do you want next? Select up to three.</p>
   <input type="checkbox" name="merch1" value="T-Shirt"> T-Shirt<br>
@@ -55,9 +74,9 @@
     </textarea> 
     <br><br> 
     
-    Name: <input name="fullname" required="" size="75" type="text"/> 
+    Name: <input id="name" name="fullname" required="" size="75" type="text"/> 
     <br><br> 
-    Email: <input name="email" required="" size="75" type="email"/> 
+    Email: <input id="email" name="email" required="" size="75" type="email"/> 
     <br><br>  
 
     <p>Stay tuned for more Gurdas merch. </p>
