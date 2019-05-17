@@ -15,35 +15,7 @@
 > </script>
   
     <title>Shop Gurdas</title> 
- <script>
-     
-  document.addEventListener("DOMContentLoaded", function(event) {
-      document.getElementById('twitter-link').addEventListener('click', e => {
-          analytics.track('Twitter Link Clicked')
-      })
-     
-      document.getElementById('the-form').addEventListener('submit', e => {
-          
-          const name = document.getElementById('name').value
-          const email = document.getElementById('email').value
-          
-          analytics.track('Form Submitted', {
-              name,
-              email
-          })
-      })
-  });
-     
-  
-//   document.addEventListener("DOMContentLoaded", function(event) {
-//   analytics.track(userId, 'Lead Captured', {
-//   email: 'email',
-//   location: 'header navbar'
-//   url: 'https://segment.com/'
-// }});
-     
-     
- </script>
+
 
 </head> 
 <body> 
